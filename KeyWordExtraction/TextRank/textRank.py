@@ -41,7 +41,6 @@ class TextRank(object):
 
                 self.edge_dict[word] = list(set(self.edge_dict[word].append(words[left, right])))
 
-
     #create a matrix to represent the relationship between each two words
     def createMatrix(self):
 
@@ -81,9 +80,8 @@ class TextRank(object):
 if __name__=="__main__":
     s = '程序员(英文Programmer)是从事程序开发、维护的专业人员。一般将程序员分为程序设计人员和程序编码人员，但两者的界限并不非常清楚，特别是在中国。软件从业人员分为初级程序员、高级程序员、系统分析员和项目经理四大类。'
     tr = TextRank(s, 3, 0.85, 700)
-    tr.cutSentence()
+    tr.splitSentence()
     tr.createNodes()
     tr.createMatrix()
     tr.calPR()
     tr.printResult()
-
