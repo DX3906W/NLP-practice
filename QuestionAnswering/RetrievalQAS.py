@@ -45,7 +45,7 @@ def segmentation(qlist):
 
 def remove_stop(qlist):
 
-    stop_word = stopwords.words['chinese']
+    stop_word = set(stopwords.words('chinese'))
     processedQlist = []
 
     if isinstance(qlist[0], list):
