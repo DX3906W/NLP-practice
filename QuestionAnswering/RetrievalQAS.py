@@ -94,7 +94,7 @@ def word_embedding(mode='glove', word_list):
         print()
     elif mode=='word2vec':
         word_embeddings = []
-        word_vectors=gensim.models.KeyedVectors.load_word2vec_format('../datadSet/zhwiki_2017_03.sg_50d.word2vec',binary=Ture)
+        word_vectors = gensim.models.KeyedVectors.load_word2vec_format('../datadSet/zhwiki_2017_03.sg_50d.word2vec',binary=Ture)
         for word in word_list:
             word_embeddings.append(word_vectors.most_similar(word))
 
