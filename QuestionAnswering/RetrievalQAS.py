@@ -84,7 +84,7 @@ def builg_dict(qlist):
 
     word_embeddings = wprd_embedding('word2vec', word_list)
 
-    word_dict = dict(word_list, wor_embedding)
+    word_dict = dict(word_list, word_embeddings)
 
     return word_embeddings
 
