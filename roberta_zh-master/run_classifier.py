@@ -732,6 +732,46 @@ class SentencePairClassificationProcessor(DataProcessor):
           print('###error.i:', i, line)
     return examples
 
+class SentimentAnalysisClassificationrocessor(DataProcessor):
+    """Processor for the internal data set. Sentiment Analysis classification"""
+    def __init__(self):
+        self.language = "zh"
+
+    def get_train_examples(self, data_dir):
+        """See base class."""
+        return self._create_exmaples(
+            self._read_tsv(os.path.join(data_dir, "nCoV_100k_train.labled.csv")), train)
+
+    def get_dev_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_tsv(os.path.join(data_dir, ""), "dev"))
+
+    def get_test_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._readd_tsv(os.path.join(data_dir, "nCov_10k_test.csv")), "test")
+
+    def get_labels(self):
+        return ["-1", "0", "1"]
+
+    def _create_examples(self, lines, set_type):
+        """Create examples for training and dev sets"""
+        examples = []
+        print("lenght of lines:", len(lines))
+        for (i, line) in enumerate(lines):
+            if i==0:
+                continue
+            guid = "%s-%s" % (set_type, i)
+            try:
+                label = tokenization.convert_to_unicode(line[5])
+                text_a = tokenization.convert_to_unicode(line[1])
+                examples.append(
+                    InputExample(guid=guid,text_a=text_a, label=label))
+            except Exception:
+                print("###error.i", i, line)
+        return examples
+
 # This function is not used by this file but is still used by the Colab and
 # people who depend on it.
 def convert_examples_to_features(examples, label_list, max_seq_length,
@@ -756,8 +796,7 @@ def main(_):
   processors = {
       "sentence_pair": SentencePairClassificationProcessor,
       "lcqmc_pair":LCQMCPairClassificationProcessor
-
-
+      "sentimetn_blog": SentimentAnalysisClassificationrocessor
   }
 
   tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,
