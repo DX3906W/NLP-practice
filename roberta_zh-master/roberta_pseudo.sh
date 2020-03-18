@@ -1,4 +1,4 @@
-export BERT_BASE_DIR=./model
+export BERT_BASE_DIR=./roberta_zh_large
 export MY_DATA_DIR=./data
 python run_classifier.py
   --task_name=sentimetn_blog \
