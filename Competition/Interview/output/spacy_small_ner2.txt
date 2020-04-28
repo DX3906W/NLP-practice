@@ -1,0 +1,53 @@
+Hong Kong Exchanges,GPE
+The Stock Exchange,ORG
+Hong Kong,GPE
+the Cayman Islands,GPE
+228,CARDINAL
+AUDITOR,ORG
+China Energy Development Holdings Limited,ORG
+Rule 13.51(4,LAW
+the Rules Governing the Listing of Securities,LAW
+The Stock Exchange of Hong Kong Limited,ORG
+the ¡®¡®Stock Exchange¡¯,ORG
+the ¡®¡®Audit Committee¡¯,LAW
+the ¡®¡®Board,LAW
+the ¡®¡®Directors¡¯¡¯,LAW
+BDO Limited,ORG
+BDO,WORK_OF_ART
+10 years,DATE
+June 2009,DATE
+the Audit Committee,ORG
+ZHONGHUI ANDA CPA Limited,ORG
+annual,DATE
+2019,DATE
+BDO,ORG
+BDO,PERSON
+the Audit Committee,ORG
+BDO,ORG
+Group,ORG
+2019,DATE
+AGM,ORG
+Shareholders,WORK_OF_ART
+2019,DATE
+ZHONGHUI ANDA,ORG
+Group,ORG
+Company,ORG
+the 2019 AGM,EVENT
+Company,ORG
+The Board and,ORG
+the Audit Committee,ORG
+BDO,ORG
+the Audit Committee,ORG
+BDO,ORG
+the past ten years,DATE
+the Board China Energy Development Holdings,ORG
+Hong Kong,GPE
+10,CARDINAL
+May 2019,DATE
+Zhao Guoqiang,PERSON
+Gu Quan Rong,PERSON
+Gu Quan Rong,PERSON
+Zong Ketao,PERSON
+Cheng Chun Ying,PERSON
+Lee Man Tai,PERSON
+2,CARDINAL

@@ -1,0 +1,43 @@
+Hong Kong Exchanges,GPE
+The Stock Exchange,ORG
+Hong Kong,GPE
+China Cinda Asset Management Co.,,ORG
+the People¡¯s Republic of China,GPE
+01359,CARDINAL
+04607,CARDINAL
+China,GPE
+Cinda,GPE
+May  ,DATE
+Ngai Wai Fung,PERSON
+Ngai,PERSON
+10, 2019,DATE
+Ngai,PERSON
+Ai Jiuchao,PERSON
+Mr. Ai,WORK_OF_ART
+3.28,CARDINAL
+Ngai,PERSON
+the Stock Exchange,ORG
+The  Stock  Exchange,ORG
+Rule 3.28,LAW
+the Rules Governing the Listing of Securities,PRODUCT
+Ai,PERSON
+The  Board,ORG
+Ngai,PERSON
+the Board China Cinda Asset Management Co.,,ORG
+ZHANG,PERSON
+Beijing,PERSON
+PRC,GPE
+May 10, 2019,DATE
+the Board of the Company,ORG
+ZHANG Zi¡¯ai,PERSON
+CHEN Xiaozhou,PERSON
+HE Jieping,PERSON
+XU Long,PERSON
+YUAN Hong,PERSON
+ZHANG Guoqing,PERSON
+LIU Chong,PERSON
+CHANG Tso Tung,PERSON
+Stephen,PERSON
+XU Dingbo,PERSON
+ZHU Wuxiang,PERSON
+SUN Baowen,PERSON
