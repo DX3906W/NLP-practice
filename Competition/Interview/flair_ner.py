@@ -14,6 +14,6 @@ for index, file in enumerate(data):
   tagger.predict(sentence)
   # iterate over entities and print
   result = sentence.get_spans('ner')
-  with open('F:/mygit/NLP-practice/Competition/Interview/output/flair_ner_'+str(index)+'.txt', 'w') as f:
+  with open('F:/mygit/NLP-practice/Competition/Interview/output/flair_ner_'+str(index)+'.txt', 'w', encoding='utf-8') as f:
     for entity in result:
       f.write(entity.text + ', ' + entity.tag + '\n')

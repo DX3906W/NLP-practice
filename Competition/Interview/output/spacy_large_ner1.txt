@@ -1,28 +1,23 @@
 Hong Kong,GPE
 The Stock Exchange of Hong Kong,ORG
 China Cinda Asset Management Co.,,ORG
-the People°Øs Republic of China,GPE
-04607,TIME
+the People‚Äôs Republic of China,GPE
 Reference  ,PERSON
 China,GPE
-the  °∞Company°±,ORG
+the  ‚ÄúCompany‚Äù,ORG
 May,DATE
 10, 2016,DATE
 Company,ORG
 Ngai Wai Fung,PERSON
 Ngai,PERSON
-May  10, 2019,EVENT
 Ngai,PERSON
 Ai Jiuchao,PERSON
-Mr,WORK_OF_ART
 Company,ORG
-Rule 3.28,LAW
-the  °∞Stock Exchange,ORG
+the  ‚ÄúStock Exchange,ORG
 Ngai,PERSON
 the Stock Exchange,ORG
 Company,ORG
 The  Stock  Exchange,ORG
-3.28,CARDINAL
 the  Stock Exchange,ORG
 Ai,PERSON
 Company,ORG
@@ -33,7 +28,7 @@ Beijing,GPE
 PRC,GPE
 May 10, 2019,DATE
 the Board of the Company,ORG
-ZHANG Zi°Øai,PERSON
+ZHANG Zi‚Äôai,PERSON
 CHEN Xiaozhou,PERSON
 XU Long,PERSON
 YUAN Hong,PERSON

@@ -1,25 +1,17 @@
 Hong Kong,GPE
 The Stock Exchange,ORG
 the Cayman Islands,GPE
-228,CARDINAL
 China Energy Development Holdings Limited,ORG
-Rule 13.51(4,LAW
-the Rules Governing the Listing of Securities,LAW
 The Stock Exchange,ORG
 Audit Committee,ORG
-Board,WORK_OF_ART
-Directors,WORK_OF_ART
 Company,ORG
 BDO Limited,ORG
-BDO,WORK_OF_ART
 Company,ORG
 10 years,DATE
 June 2009,DATE
 the Audit Committee,ORG
 Board,ORG
 ZHONGHUI ANDA CPA Limited,ORG
-ZHONGHUI ANDA,WORK_OF_ART
-2019 AGM,WORK_OF_ART
 BDO,GPE
 BDO,ORG
 the Board and the Audit Committee,ORG
@@ -32,7 +24,6 @@ Group,ORG
 2019,DATE
 AGM,ORG
 Company,ORG
-Shareholders,WORK_OF_ART
 2019,DATE
 AGM,ORG
 ZHONGHUI ANDA,PERSON
@@ -47,7 +38,6 @@ BDO,ORG
 Company,ORG
 BDO,ORG
 the Board and the Audit Committee,ORG
-1,CARDINAL
 Board,ORG
 BDO,ORG
 the past ten years,DATE

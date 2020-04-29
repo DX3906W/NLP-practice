@@ -21,9 +21,10 @@ for  i in range(3):
         file_name = 'spacy_large_ner'
     for index, file in enumerate(data):
         doc = nlp(file)
-        with open(appConfig.out_file_path+file_name+str(index+1)+'.txt', 'w') as f:
+        with open(appConfig.out_file_path+file_name+str(index+1)+'.txt', 'w', encoding='utf-8') as f:
             for X in doc.ents:
-                f.write(X.text+','+X.label_+'\n')
+                if X.label_ in ['ORG', 'DATE', 'GPE', 'PERSON']:
+                    f.write(X.text+','+X.label_+'\n')
 
         labels= [x.label_ for x in doc.ents]
         print(Counter(labels))
