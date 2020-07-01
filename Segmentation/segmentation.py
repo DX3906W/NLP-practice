@@ -32,7 +32,7 @@ def viterbi(word_prob, segments, sentence):
 
         for edge in temp_list:
             temp = record[i-1] * word_prob[sentence[i: edge]]
-            if temp >  record[edge-1]:
+            if temp > record[edge-1]:
                 record[edge-1] = temp
                 routes[edge-1] = routes[i-1][:]
                 routes[edge-1].append(edge)

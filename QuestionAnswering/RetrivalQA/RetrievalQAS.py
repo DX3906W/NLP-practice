@@ -5,6 +5,8 @@ from nltk.corpus import stopwords
 import gensim
 import numpy as np
 
+
+
 def load_data():
     path = '../dataSet/QAS/train-v2.0.json'
     file = open(path)
@@ -31,12 +33,11 @@ def segmentation(qlist):
 
     processedQlist = []
 
-    if is instance(qlist):
-        for q in qlist:
+    for q in qlist:
+        if isinstance(qlist):
             processedQlist.append(jieba.cut(q))
-
-    else:
-        processedQlist.append(jieba.cut(q))
+        else:
+            processedQlist.append(jieba.cut(q))
 
     processedAlist = remove_stop(processedQlist)
 
@@ -57,7 +58,7 @@ def remove_stop(qlist):
     return processedQlist
 
 
-def preprocess(mode='train', input_question):
+def preprocess(input_question, mode='train'):
 
     if mode=='train':
         qlist, alist = load_data()
@@ -69,8 +70,8 @@ def preprocess(mode='train', input_question):
         return qlist, alist
 
     elif mode=='test':
-        words = segmentation(input_question)
-        words = remove_stop(words)
+        qlist = segmentation(input_question)
+        qlist = remove_stop(qlist)
 
         return qlist
 
@@ -78,23 +79,23 @@ def preprocess(mode='train', input_question):
         raise Exception("Invilid mode: ", mode)
 
 
-def builg_dict(qlist):
+def build_dict(qlist):
 
     word_list = list(set(np.array(qlist).flatten().tolist()))
 
-    word_embeddings = wprd_embedding('word2vec', word_list)
+    word_embeddings = word_embedding('word2vec', word_list)
 
     word_dict = dict(word_list, word_embeddings)
 
     return word_embeddings
 
-def word_embedding(mode='glove', word_list):
+def word_embedding(word_list, mode='glove'):
 
     if mode=='glove':
         print()
     elif mode=='word2vec':
         word_embeddings = []
-        word_vectors = gensim.models.KeyedVectors.load_word2vec_format('../datadSet/zhwiki_2017_03.sg_50d.word2vec',binary=Ture)
+        word_vectors = gensim.models.KeyedVectors.load_word2vec_format('../datadSet/zhwiki_2017_03.sg_50d.word2vec', binary=True)
         for word in word_list:
             word_embeddings.append(word_vectors.most_similar(word))
 
@@ -107,8 +108,9 @@ def word_embedding(mode='glove', word_list):
 # for i in sim:
 #     print(i)
 def sen2vec():
+
     qlist, alist = preprocess()
-    word_dict = bulid_dict(qlist)
+    word_dict = build_dict(qlist)
     questionVectors = {}
 
     for q, a in qlist, alist:
@@ -117,7 +119,7 @@ def sen2vec():
             wordVectors.append(word_dict[w])
 
         questionVector = np.array(wordVectors).mean(axis=0)
-        questionVectros[questionVector] = a
+        questionVectors[questionVector] = a
 
     return questionVectors
 
@@ -142,7 +144,7 @@ def retrival(input_question):
 
     QApair = sen2vec()
 
-    input_words = preprocess(mode='test', input_question)
+    input_words = preprocess(input_question, mode='test')
     word_dict = build_dict()
 
     input_vector = []
@@ -151,7 +153,7 @@ def retrival(input_question):
 
     input_vertor = np.array(input_vector).mean(axis=1)
 
-    for question in questionVectors.keys():
+    for question in QApair.keys():
         if similarity(input_vertor, question)>max:
             answer = QApair[question]
 
