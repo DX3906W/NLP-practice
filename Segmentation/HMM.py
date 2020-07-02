@@ -66,7 +66,6 @@ class HMM(object):
 
                 word_list = line.split()
 
-
                 line_state = []
                 for word in word_list:
                     line_state.extend(makeLabel(word))
@@ -151,7 +150,6 @@ class HMM(object):
             elif pos == 'S':
                 yield  char
                 next = i + 1
-
 
         if next < len(text):
             yield text[next:]
